@@ -24,6 +24,12 @@ func personExample(){
 	person.UpdatePerson(&p1, "Charlie", 40)
 	fmt.Println(p1) // Output: {2 Charlie 40}
 	
+	p2 := &p1 // p2 is a pointer to p1, they point to the same underlying data
+
+	p2.Name = "Dave"
+	fmt.Println(p1.Name) // Output: Dave
+
+
 }
 
 func main(){
