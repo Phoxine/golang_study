@@ -14,7 +14,8 @@ func NewPerson(id int, name string, age int) Person {
 	}
 }
 
-func UpdatePerson(p *Person, newName string, newAge int){
+// method with pointer receiver can modify the original struct
+func (p *Person) UpdatePerson(newName string, newAge int) {
 	p.id++ // You can access and modify the unexported field 'id' within the package
 	p.Name = newName
 	p.Age = newAge

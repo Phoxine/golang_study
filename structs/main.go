@@ -21,7 +21,8 @@ func personExample(){
 	// fmt.Println(p1.id)
 	// p1.id = 2
 
-	person.UpdatePerson(&p1, "Charlie", 40)
+	// Using the method to update the person
+	p1.UpdatePerson("Charlie", 40)
 	fmt.Println(p1) // Output: {2 Charlie 40}
 	
 	p2 := &p1 // p2 is a pointer to p1, they point to the same underlying data
